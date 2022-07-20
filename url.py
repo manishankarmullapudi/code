@@ -25,8 +25,7 @@ url_10 = '&theme=&description=&contexts=&sites=&sections=&includedConfidences=&i
 spider_url = source + url_1 + apiKey + url_2 + context_id + url_3 + user_id + url_4
 spider_run = requests.get(spider_url)
 spider_run.json()
-while int(zap.spider.status()) < 100:
-    # Poll the status until it completes
+while int(zap.spider.status()) < 100:    
     print('Spider progress %: ' + zap.spider.status())
 print('spider completed')
 active_url = source + url_5 + apiKey + url_2 + context_id + url_3 + user_id + url_6
